@@ -57,11 +57,15 @@ export default function Projects() {
             <div className="md:flex">
               <div className="md:w-1/2">
                 <img
-                  src={p.img}
-                  onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = p.fallback; }}
-                  alt={p.title}
-                  className="w-full h-48 object-cover md:h-full"
-                />
+  src={p.image}
+  onError={(e) => {
+    e.currentTarget.onerror = null;
+    e.currentTarget.src = p.fallback;
+  }}
+  alt={p.title}
+  className="w-full h-48 object-cover md:h-full"
+/>
+
               </div>
               <div className="p-6 md:w-1/2">
                 <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">{p.title}</h3>
