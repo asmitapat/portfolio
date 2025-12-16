@@ -1,42 +1,31 @@
 import { motion } from 'framer-motion';
 import { SiGithub } from 'react-icons/si';
 import { FiExternalLink } from 'react-icons/fi';
-import fallback1 from '../assets/projects/project1.svg';
-import fallback2 from '../assets/projects/project2.svg';
-import fallback3 from '../assets/projects/project3.svg';
 
 export default function Projects() {
-  // By default, try to load project screenshots from `public/images/projects/`.
-  // Users can drop images there (e.g. project1.jpg) to replace placeholders.
   const projects = [
-  {
-    title: 'Real-time Collaborative Todo Dashboard',
-    tech: ['React', 'Node.js', 'MongoDB', 'Socket.IO'],
-    desc: 'Smart Assign, drag-and-drop, conflict handling, real-time updates.',
-    image: '/images/project1.png',
-    fallback: fallback1,
-    demo: 'https://todo-dashboard-beta.vercel.app/login',
-    code: 'https://github.com/asmitapat/TODO-Dashboard'
-  },
-  {
-    title: 'Face Tracking + Recording App',
-    tech: ['React', 'Next.js', 'face-api.js'],
-    desc: 'Real-time face detection and local video recording.',
-    image: '/images/project2.png',
-    fallback: fallback2,
-    demo: 'https://face-tracking-app-mauve.vercel.app/',
-    code: 'https://github.com/asmitapat/face-tracking-app'
-  },
-  {
-    title: 'Touch, Select and Dine System',
-    tech: ['React', 'Node.js', 'Database'],
-    desc: 'Tablet-based restaurant ordering with real-time management.',
-    image: '/images/project3.png',
-    fallback: fallback3,
-    demo: '#',
-    code: '#'
-  }
-];
+    {
+      title: 'Real-time Collaborative Todo Dashboard',
+      tech: ['React', 'Node.js', 'MongoDB', 'Socket.IO'],
+      desc: 'Smart Assign, drag-and-drop, conflict handling, real-time updates.',
+      demo: 'https://todo-dashboard-beta.vercel.app/login',
+      code: 'https://github.com/asmitapat/TODO-Dashboard'
+    },
+    {
+      title: 'Face Tracking + Recording App',
+      tech: ['React', 'Next.js', 'face-api.js'],
+      desc: 'Real-time face detection and local video recording.',
+      demo: 'https://face-tracking-app-mauve.vercel.app/',
+      code: 'https://github.com/asmitapat/face-tracking-app'
+    },
+    {
+      title: 'Touch, Select and Dine System',
+      tech: ['React', 'Node.js', 'Database'],
+      desc: 'Tablet-based restaurant ordering with real-time management.',
+      demo: '#',
+      code: '#'
+    }
+  ];
 
 
   return (
@@ -55,19 +44,7 @@ export default function Projects() {
             transition={{ duration: 0.5, delay: i * 0.08 }}
           >
             <div className="md:flex">
-              <div className="md:w-1/2">
-                <img
-  src={p.image}
-  onError={(e) => {
-    e.currentTarget.onerror = null;
-    e.currentTarget.src = p.fallback;
-  }}
-  alt={p.title}
-  className="w-full h-48 object-cover md:h-full"
-/>
-
-              </div>
-              <div className="p-6 md:w-1/2">
+              <div className="p-6 w-full">
                 <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">{p.title}</h3>
                 <div className="flex flex-wrap gap-2 mb-3">
                   {p.tech.map((t) => (
