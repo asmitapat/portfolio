@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import profileSvg from '../assets/profile.svg';
+<img src="/images/profile.jpg" alt="Profile" />
 
 // Use images placed in the `public/images/` folder for easy replacement.
 const PUBLIC_PROFILE = '/images/profile.jpg';

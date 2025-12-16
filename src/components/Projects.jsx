@@ -9,34 +9,35 @@ export default function Projects() {
   // By default, try to load project screenshots from `public/images/projects/`.
   // Users can drop images there (e.g. project1.jpg) to replace placeholders.
   const projects = [
-    {
-      title: 'Real-time Collaborative Todo Dashboard',
-      tech: ['React', 'Node.js', 'MongoDB', 'Socket.IO'],
-      desc: 'Smart Assign, drag-and-drop, conflict handling, real-time updates.',
-      img: '/images/project1.png',
-      fallback: fallback1,
-      demo: 'https://todo-dashboard-beta.vercel.app/login',
-      code: 'https://github.com/asmitapat/TODO-Dashboard'
-    },
-    {
-      title: 'Face Tracking + Recording App',
-      tech: ['React', 'Next.js', 'face-api.js'],
-      desc: 'Real-time face detection and local video recording.',
-      img: '/images/project2.png',
-      fallback: fallback2,
-      demo: 'https://face-tracking-app-mauve.vercel.app/',
-      code: 'https://github.com/asmitapat/face-tracking-app'
-    },
-    {
-      title: 'Touch, Select and Dine System',
-      tech: ['React', 'Node.js', 'Database'],
-      desc: 'Tablet-based restaurant ordering with real-time management.',
-      img: '/images/project3.png',
-      fallback: fallback3,
-      demo: '#',
-      code: '#'
-    }
-  ];
+  {
+    title: 'Real-time Collaborative Todo Dashboard',
+    tech: ['React', 'Node.js', 'MongoDB', 'Socket.IO'],
+    desc: 'Smart Assign, drag-and-drop, conflict handling, real-time updates.',
+    image: '/images/project1.png',
+    fallback: fallback1,
+    demo: 'https://todo-dashboard-beta.vercel.app/login',
+    code: 'https://github.com/asmitapat/TODO-Dashboard'
+  },
+  {
+    title: 'Face Tracking + Recording App',
+    tech: ['React', 'Next.js', 'face-api.js'],
+    desc: 'Real-time face detection and local video recording.',
+    image: '/images/project2.png',
+    fallback: fallback2,
+    demo: 'https://face-tracking-app-mauve.vercel.app/',
+    code: 'https://github.com/asmitapat/face-tracking-app'
+  },
+  {
+    title: 'Touch, Select and Dine System',
+    tech: ['React', 'Node.js', 'Database'],
+    desc: 'Tablet-based restaurant ordering with real-time management.',
+    image: '/images/project3.png',
+    fallback: fallback3,
+    demo: '#',
+    code: '#'
+  }
+];
+
 
   return (
     <section id="projects" className="max-w-6xl mx-auto px-4 py-20">
